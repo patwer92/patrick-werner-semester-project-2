@@ -1,0 +1,54 @@
+/* COLORS */
+
+//FLAT COLORS
+// $primary-color: #2188ef;
+$primary-color: #3c8dde;
+$secondary-color: #3dc2f3;
+$white-color: #ffffff;
+$black-color: #1b1c1d;
+$lightgrey-color: #f4f4f4;
+$midgrey-color: #9a9da0;
+$darkgrey-color: #343a40;
+$lightblue-color: #8bc7ec;
+$darkblue-color: #096ed3;
+$red-color: #f34040;
+$darkred-color: #ce0f0f;
+$yellow-color: #feb42d;
+$orange-color: #f76746;
+$green-color: #3fcb5b;
+$darkgreen-color: #06a526;
+$purple-color: #7c30fe;
+
+//GRADIENT COLORS
+$grad-blue: linear-gradient(45deg, #3dc2f3, #3c8dde);
+$grad-lightblue: linear-gradient(45deg, #b8cee3, #8bc7ec);
+$grad-red: linear-gradient(45deg, #f34040, #ce0f0f);
+$grad-orange: linear-gradient(45deg, #feb42d, #f76746);
+$grad-green: linear-gradient(45deg, #3fcb5b, #06a526);
+
+//SOCIAL MEDIA COLORS
+$twitter-blue: #1da1f2;
+$youtube-red: #ff0000;
+
+/* TYPOGRAPHY */
+
+// FONT-FAMILY
+$primary-font: "Nunito Sans", sans-serif;
+
+// FONT-SIZE
+$xxl-font: 62px;
+$xl-font: 42px;
+$large-font: 27px;
+$mid-font: 18px;
+$small-font: 12px;
+
+/* RESPONSIVE */
+
+//BREAKPOINTS
+$xl-breakpoint: 1199px;
+$large-breakpoint: 992px;
+$mid-breakpoint: 768px;
+$small-breakpoint: 575px;
+
+//BOX-SHADOW
+$primary-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;

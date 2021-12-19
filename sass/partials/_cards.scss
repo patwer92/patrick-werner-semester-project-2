@@ -1,0 +1,45 @@
+.card {
+  width: 21.8rem;
+  border: none !important;
+  box-shadow: $primary-shadow;
+
+  @media (max-width: $large-breakpoint) {
+    width: 20rem;
+  }
+}
+
+.card-img-top {
+  height: 15rem;
+
+  @media (max-width: $large-breakpoint) {
+    height: 14.2rem;
+  }
+}
+
+.card-body {
+  background: $lightgrey-color !important;
+  display: flex;
+  flex-direction: column;
+
+  .card-title,
+  .card-price {
+    font-size: $mid-font;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .card-title {
+    color: $darkgrey-color;
+    letter-spacing: 0.05rem;
+  }
+
+  .card-price {
+    color: $primary-color;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

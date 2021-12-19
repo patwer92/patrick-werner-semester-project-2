@@ -1,0 +1,42 @@
+.jumbotron {
+  height: 30rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0 !important;
+
+  h1 {
+    font-size: 4rem;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 900;
+    color: $darkgrey-color;
+    font-size: $xxl-font;
+
+    @media (max-width: $xl-breakpoint) {
+      font-size: $xl-font;
+    }
+    @media (max-width: $small-breakpoint) {
+      margin: 2rem 0;
+      font-size: $large-font;
+    }
+  }
+  .lead {
+    color: $darkgrey-color;
+    font-weight: 600;
+    font-size: $large-font;
+
+    @media (max-width: $xl-breakpoint) {
+      font-size: $mid-font;
+    }
+  }
+
+  .btn-banner {
+    height: 2.5rem !important;
+    margin-top: 2rem;
+    border: none;
+    width: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

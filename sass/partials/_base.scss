@@ -1,0 +1,219 @@
+body {
+  height: 100vh;
+  background: $white-color;
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.home-section,
+.shop-section {
+  min-height: auto;
+
+  .products-container {
+    margin-bottom: 5rem !important;
+  }
+}
+
+//MAIN HEADERS
+.admin-section h1,
+.cart-section h1,
+.shop-section h1,
+.home-section h2 {
+  text-align: center;
+  font-size: $large-font;
+  text-transform: capitalize;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  color: $darkgrey-color;
+}
+
+//BREADCRUMB
+.breadcrumb {
+  padding: 0 !important;
+  height: 6rem;
+  display: flex;
+  align-items: flex-end;
+  background: transparent !important;
+}
+
+//HORIZONTAL LINE
+hr {
+  border: 1px solid $lightgrey-color !important;
+  width: 100%;
+}
+
+//FOOTER WRAPPER
+.wrapper {
+  flex: 1 auto;
+}
+
+//DESKTOP & MOBILE VIEW
+.desktop-view {
+  display: block;
+  @media (max-width: $large-breakpoint) {
+    display: none;
+  }
+}
+.mobile-view {
+  display: none;
+  @media (max-width: $large-breakpoint) {
+    display: block;
+  }
+}
+
+//BUTTONS
+.btn {
+  background: $darkblue-color !important;
+  color: $white-color !important;
+  font-family: $primary-font;
+  font-weight: 700 !important;
+  letter-spacing: 0.05rem;
+  text-transform: capitalize;
+  box-shadow: $primary-shadow;
+
+  &:hover {
+    background: $primary-color !important;
+  }
+}
+
+.cart-btn,
+.view-btn,
+.checkout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.4rem !important;
+}
+
+.cart-btn {
+  margin-top: 0.35rem;
+  width: 8rem;
+}
+
+.btn-container {
+  padding: 2rem 0 8rem 0 !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @media (max-width: $mid-breakpoint) {
+    flex-direction: column;
+  }
+
+  .to-shop-btn,
+  .to-cart-btn {
+    width: 19rem;
+    height: 2.5rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    @media (max-width: $mid-breakpoint) {
+      width: 100%;
+    }
+  }
+
+  .to-shop-btn {
+    color: $darkgrey-color !important;
+    background: $lightgrey-color !important;
+    border: 2px solid $darkgrey-color !important;
+
+    &:hover {
+      color: $white-color !important;
+      border: 2px solid $primary-color !important;
+      background: $primary-color !important;
+    }
+
+    .arrow-left {
+      font-size: 1.5rem;
+      padding-right: 1rem;
+    }
+  }
+
+  .to-cart-btn {
+    color: $white-color !important;
+    background: $darkgreen-color !important;
+    border: 2px solid $darkgreen-color !important;
+
+    &:hover {
+      color: $white-color !important;
+      border: 2px solid $green-color !important;
+      background: $green-color !important;
+    }
+
+    @media (max-width: $mid-breakpoint) {
+      margin-top: 3rem !important;
+    }
+
+    .to-cart-icon {
+      font-size: 1.2rem;
+      padding-left: 1rem;
+    }
+  }
+}
+
+.checkout-btn {
+  background: $darkgreen-color !important;
+
+  &:hover {
+    background: $green-color !important;
+  }
+}
+
+//LOADER
+.loader {
+  margin: 2.5rem auto;
+  border: 16px solid #e4e4e4;
+  border-top: 16px solid $primary-color;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.details-loader {
+  margin: 5rem auto !important;
+}
+
+//ERROR MESSAGE
+.message-container {
+  width: 100%;
+}
+.message {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid $midgrey-color;
+  border-radius: 0.25rem !important;
+  color: $midgrey-color;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.message.error {
+  border-color: $red-color;
+  color: $white-color;
+  background: $red-color;
+}
+.message.warning {
+  border-color: $yellow-color;
+  color: $white-color;
+  background: $yellow-color;
+}
+.message.success {
+  border-color: $green-color;
+  color: $white-color;
+  background: $green-color;
+}

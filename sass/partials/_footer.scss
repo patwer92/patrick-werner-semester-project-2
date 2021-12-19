@@ -1,0 +1,209 @@
+footer {
+  position: relative;
+  min-height: 18rem;
+  display: flex;
+  flex-direction: column;
+  background: $darkgrey-color !important;
+
+  @media (max-width: $large-breakpoint) {
+    min-height: auto;
+  }
+
+  p {
+    margin: 0 !important;
+    height: 1.5rem;
+    font-size: 0.8rem;
+    text-align: center;
+    color: white;
+    background: $darkgrey-color;
+  }
+}
+
+.footer-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: $large-breakpoint) {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 40rem;
+  }
+}
+
+.footer-brand {
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  img {
+    width: 10.2rem;
+  }
+}
+
+.newsletter-container form label,
+.social-container p {
+  font-size: 1.3rem;
+}
+
+.newsletter-container {
+  width: 16.9rem;
+
+  form {
+    label {
+      padding-bottom: 0.5rem;
+      width: 16.9rem;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: $white-color;
+    }
+
+    input,
+    .newsletter-btn {
+      height: 2.5rem !important;
+      width: 100%;
+    }
+    input {
+      padding-left: 0.5rem;
+      border-radius: 0.25rem;
+      border: none;
+    }
+    .newsletter-btn {
+      margin-top: 0.5rem;
+    }
+    .form-error {
+      text-align: center;
+      color: $red-color;
+      display: none;
+    }
+  }
+}
+
+.social-container {
+  margin-bottom: 2.1rem;
+  width: 15.7rem;
+  color: $white-color;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  .social-icons {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.5rem;
+
+    a {
+      text-decoration: none !important;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.12);
+      }
+    }
+
+    .fb-icon {
+      background: -moz-linear-gradient($white-color, $white-color);
+      background: -webkit-linear-gradient($white-color, $white-color);
+      background: linear-gradient($white-color, $white-color);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      &:hover {
+        background: -moz-linear-gradient(#18aefe, #0062e0);
+        background: -webkit-linear-gradient(#18aefe, #0062e0);
+        background: linear-gradient(#18aefe, #0062e0);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .twitter-icon {
+      color: $white-color;
+
+      &:hover {
+        color: $twitter-blue;
+      }
+    }
+
+    .insta-icon {
+      background: -moz-linear-gradient($white-color, $white-color);
+      background: -webkit-linear-gradient($white-color, $white-color);
+      background: linear-gradient($white-color, $white-color);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      &:hover {
+        background: -moz-linear-gradient(
+          45deg,
+          #f09433 0%,
+          #e6683c 25%,
+          #dc2743 50%,
+          #cc2366 75%,
+          #bc1888 100%
+        );
+        background: -webkit-linear-gradient(
+          45deg,
+          #f09433 0%,
+          #e6683c 25%,
+          #dc2743 50%,
+          #cc2366 75%,
+          #bc1888 100%
+        );
+        background: linear-gradient(
+          45deg,
+          #f09433 0%,
+          #e6683c 25%,
+          #dc2743 50%,
+          #cc2366 75%,
+          #bc1888 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .yt-icon {
+      color: $white-color;
+
+      &:hover {
+        color: $youtube-red;
+      }
+    }
+  }
+}
+
+.to-top-container {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  text-decoration: none !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.15s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  .to-top-btn {
+    color: $white-color;
+    font-size: 2rem;
+    transition: 0.15s ease-in-out;
+  }
+}
