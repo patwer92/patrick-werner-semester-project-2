@@ -1,10 +1,13 @@
 import { baseUrl } from "./settings/api.js";
-
 import { displayMessage } from "./components/common/displayMessage.js";
 import { deleteButton } from "./components/deleteProduct.js";
+import { submitNewsletterForm } from "./components/form.js";
 import createMenu from "./components/common/createMenu.js";
 
 createMenu();
+
+const newsletterForm = document.querySelector("#newsletterForm");
+newsletterForm.addEventListener("submit", submitNewsletterForm);
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
