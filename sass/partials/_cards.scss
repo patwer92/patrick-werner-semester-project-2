@@ -10,6 +10,7 @@
 
 .card-img-top {
   height: 15rem;
+  object-fit: cover;
 
   @media (max-width: $large-breakpoint) {
     height: 14.2rem;

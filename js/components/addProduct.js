@@ -26,7 +26,7 @@ function submitForm(event) {
 
   message.innerHTML = "";
 
-  const titleValue = title.value.trim();
+  const nameValue = name.value.trim();
   const priceValue = parseFloat(price.value);
   const descriptionValue = description.value.trim();
   const featuredValue = featured.value;
@@ -54,10 +54,10 @@ function submitForm(event) {
 
   request.open("POST", `${baseUrl}products`);
 
-  request.send(formData, titleValue, priceValue, descriptionValue, featuredValue);
+  request.send(formData, nameValue, priceValue, descriptionValue, featuredValue);
 
   if (isNaN(priceValue)) {
-    return displayMessage("warning", "Please enter valid values", ".message-container");
+    return displayMessage("warning", "Invalid values", ".message-container");
   }
 
   displayMessage("success", "Product created", ".message-container");

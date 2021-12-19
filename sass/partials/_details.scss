@@ -13,8 +13,9 @@
   }
 
   img {
-    background-size: cover;
-    width: 40rem;
+    object-fit: cover;
+    width: 39rem;
+    height: 30rem;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
 

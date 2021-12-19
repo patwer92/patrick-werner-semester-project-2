@@ -36,3 +36,14 @@ function getFromStorage(key) {
 
   return JSON.parse(value);
 }
+
+export function logout() {
+  const doLogout = confirm("Are you sure you want to log out?");
+
+  if (doLogout) {
+    localStorage.removeItem(tokenKey);
+    localStorage.removeItem(userKey);
+
+    window.location = "/";
+  }
+}

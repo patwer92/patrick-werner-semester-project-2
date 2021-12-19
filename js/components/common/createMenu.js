@@ -1,10 +1,6 @@
 import { getUsername } from "../../utils/storage.js";
 
-// import { logout } from "../utils/storage.js";
-
-// logoutBtn.onclick = function () {
-//   console.log(hello);
-// };
+import { logout } from "../../utils/storage.js";
 
 export default function createMenu() {
   const { pathname } = document.location;
@@ -22,8 +18,8 @@ export default function createMenu() {
                   href="login.html">Login</a>`;
 
   if (username) {
-    authLinkDesktop = `<a class="nav-link" href="/">Logout<i class="fas fa-user login-icon"></i></a>`;
-    authLinkMobile = `<a class="nav-link logout" href="/">Logout</a>`;
+    authLinkDesktop = `<a class="nav-link user-btn" href="/">Logout<i class="fas fa-user login-icon"></i></a>`;
+    authLinkMobile = `<a class="nav-link user-btn" href="/">Logout</a>`;
   }
 
   navBar.innerHTML = ` 
@@ -86,4 +82,8 @@ export default function createMenu() {
       </div>
     </div>
   </div>`;
+  if (username) {
+    const logoutLink = document.querySelector(".user-btn");
+    logoutLink.addEventListener("click", logout);
+  }
 }
