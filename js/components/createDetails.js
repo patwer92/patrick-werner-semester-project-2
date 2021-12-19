@@ -3,11 +3,15 @@ import { getUsername } from "../utils/storage.js";
 
 const detailsContainer = document.querySelector(".details-section");
 
+const title = document.querySelector("title");
+
 const products = getExistingProducts();
 
 const username = getUsername();
 
 export function createDetails(product) {
+  title.innerHTML = `Summit | ${product.name}`;
+
   let btnText = "Add to cart";
 
   const doesObjectExist = products.find((prod) => prod.id === product.id);
