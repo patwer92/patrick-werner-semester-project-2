@@ -4,7 +4,7 @@ export function createProduct(product) {
   return `<div class="col mb-4">
                 <div class="products-container">
                     <div class="card m-auto">
-                    <img src="${product.image.url}" class="card-img-top" alt="..." />
+                    <img src="${product.image.url}" class="card-img-top" alt="${product.image.alternativeText}" />
                     <div class="card-body">
                         <h5 class="card-title">${product.name}</h5>
                         <p class="card-price">
