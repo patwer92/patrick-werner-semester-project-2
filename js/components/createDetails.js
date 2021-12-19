@@ -1,11 +1,11 @@
 import { getExistingProducts } from "../utils/cartFunctions.js";
-// import { getUsername } from "../utils/storage.js";
+import { getUsername } from "../utils/storage.js";
 
 const detailsContainer = document.querySelector(".details-section");
 
 const products = getExistingProducts();
 
-// const username = getUsername();
+const username = getUsername();
 
 export function createDetails(product) {
   let btnText = "Add to cart";
@@ -16,7 +16,14 @@ export function createDetails(product) {
     btnText = "Remove from cart";
   }
 
-  return `<nav aria-label="breadcrumb">
+  let authLink = "";
+
+  if (username) {
+    authLink = `<a href="edit.html?id=${product.id}" class="btn mt-5">Edit product</a>`;
+  }
+
+  return `${authLink}
+        <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="shop.html">Shop</a></li>
                 <li class="breadcrumb-item active" aria-current="page">${product.name}</li>
@@ -28,14 +35,18 @@ export function createDetails(product) {
                 <h3 class="details-title">${product.name}</h3>
 
                 <p class="details-text">${product.description}</p>
+               
                 <hr />
                 <div>
                     <p class="price-text">$${product.price}</p>
                     <button class="cart-btn btn" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image.url}">
                         ${btnText}
                     </button>
+                    
                 </div>
+            
             </div>
+           
         </div>
         <div class="btn-container">
             <a href="shop.html" class="to-shop-btn btn">

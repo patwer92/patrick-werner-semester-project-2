@@ -19,7 +19,8 @@ html {
 }
 
 //MAIN HEADERS
-.admin-section h1,
+.edit-section h1,
+.add-section h1,
 .cart-section h1,
 .shop-section h1,
 .home-section h2 {
@@ -165,6 +166,25 @@ hr {
   }
 }
 
+.add-btn,
+.update-btn,
+.delete-btn {
+  margin-top: 1rem;
+  width: 20rem;
+
+  @media (max-width: $small-breakpoint) {
+    width: 100%;
+  }
+}
+
+.delete-btn {
+  background: $darkred-color !important;
+
+  &:hover {
+    background: $red-color !important;
+  }
+}
+
 //LOADER
 .loader {
   margin: 2.5rem auto;
@@ -189,6 +209,7 @@ hr {
 
 //ERROR MESSAGE
 .message-container {
+  margin: 1rem 0;
   width: 100%;
 }
 .message {

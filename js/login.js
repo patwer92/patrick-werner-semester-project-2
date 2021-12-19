@@ -24,10 +24,6 @@ function submitForm(event) {
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
 
-  if (emailValue.length === 0 || passwordValue === 0) {
-    return displayMessage("warning", "There are currently no values.", ".message-container");
-  }
-
   if (validateEmail(emailValue)) {
     email.style.border = "1px solid black";
     emailError.style.display = "none";

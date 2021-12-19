@@ -13,6 +13,8 @@ let products = [];
 async function setup() {
   products = await getProducts();
   createProductList(products);
+
+  console.log(products);
 }
 
 setup();

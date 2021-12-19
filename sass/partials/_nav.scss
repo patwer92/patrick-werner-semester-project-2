@@ -38,27 +38,11 @@
   justify-content: space-between;
 }
 
-.nav-desktop,
-.nav-mobile {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.nav-desktop {
+.nav-item {
   display: flex;
-  @media (max-width: $large-breakpoint) {
-    display: none;
-  }
-}
-
-.nav-mobile {
-  display: flex;
-  flex-direction: column;
-  display: none;
 
   @media (max-width: $large-breakpoint) {
-    display: block;
+    flex-direction: column;
   }
 }
 
@@ -88,4 +72,28 @@
 .login-icon,
 .cart-icon {
   padding-left: 0.25rem;
+}
+
+.nav-desktop,
+.nav-mobile {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-desktop {
+  display: flex;
+  @media (max-width: $large-breakpoint) {
+    display: none;
+  }
+}
+
+.nav-mobile {
+  display: flex;
+  flex-direction: column;
+  display: none;
+
+  @media (max-width: $large-breakpoint) {
+    display: block;
+  }
 }

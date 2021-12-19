@@ -1,7 +1,8 @@
+import createMenu from "./components/common/createMenu.js";
 import { displayMessage } from "./components/common/displayMessage.js";
 import { getExistingProducts } from "./utils/cartFunctions.js";
 import { submitNewsletterForm } from "./components/form.js";
-import createMenu from "./components/common/createMenu.js";
+import { cartSummary } from "./utils/cartFunctions.js";
 
 createMenu();
 
@@ -21,6 +22,8 @@ if (products.length === 0) {
     "There are no products selected in your shopping cart.",
     ".cart-container"
   );
+} else {
+  cartSummary();
 }
 
 products.forEach((product) => {

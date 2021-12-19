@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Summit | Shopping Cart</title>
+    <title>Summit | Add Products</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,24 +29,46 @@
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark"></nav>
     </header>
     <main class="wrapper">
-      <!-- Cart section -->
-      <section class="cart-section container my-5">
-        <h1>Shopping Cart</h1>
+      <!-- Add Products section -->
+      <section class="add-section container my-5">
+        <h1>Add product</h1>
         <hr />
-        <div class="cart-container">
-          <div class="cart"></div>
-          <div class="summary-container">
-            <div class="summary-body">
-              <!-- <h3>Cart Summary</h3>
-              <p>Total price: <span>$420</span></p>
-              <a href="#" class="checkout-btn btn">Checkout</a> -->
+        <div class="add-container">
+          <form class="add-form mt-4">
+            <div class="message-container"></div>
+            <div class="form-group">
+              <label for="name">Title</label>
+              <input name="name" class="form-control" id="name" required />
             </div>
-          </div>
-        </div>
-        <div class="btn-container pt-4">
-          <a href="shop.html" class="to-shop-btn btn"
-            ><i class="fas fa-long-arrow-alt-left arrow-left"></i>Back to shop</a
-          >
+            <div class="form-group">
+              <label for="price">Price</label>
+              <input name="price" class="form-control" id="price" required />
+            </div>
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea
+                name="description"
+                class="form-control"
+                id="description"
+                rows="3"
+                required
+              ></textarea>
+              <div class="form-check mt-3">
+                <input
+                  class="form-check-input search"
+                  type="checkbox"
+                  id="featured"
+                  name="featured"
+                />
+                <label class="form-check-label" for="featured"> Featured product</label>
+              </div>
+            </div>
+            <div class="form-group my-4">
+              <label for="image">Upload Image</label>
+              <input type="file" name="image" class="form-control-file" id="image" required />
+            </div>
+            <button type="submit" class="btn add-btn">Add product</button>
+          </form>
         </div>
       </section>
     </main>
@@ -109,6 +131,6 @@
       integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/cart.js" type="module"></script>
+    <script src="./js/add.js" type="module"></script>
   </body>
 </html>

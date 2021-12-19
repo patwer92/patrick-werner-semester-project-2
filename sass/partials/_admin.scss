@@ -1,3 +1,31 @@
-.admin-section {
-  min-height: 70vh;
+.add-section,
+.edit-section {
+  min-height: 100%;
+}
+
+.add-container,
+.edit-container {
+  margin-bottom: 10rem;
+}
+
+.add-form {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: $primary-shadow;
+  background: $lightgrey-color;
+}
+
+.form-group label {
+  font-weight: 600;
+}
+
+.form-check {
+  .form-check-input {
+    height: 1.3rem;
+    width: 1.3rem;
+  }
+  .form-check-label {
+    margin-top: 0.2rem;
+    padding-left: 0.6rem;
+  }
 }

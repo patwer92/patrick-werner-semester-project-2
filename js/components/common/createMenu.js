@@ -18,8 +18,12 @@ export default function createMenu() {
                   href="login.html">Login</a>`;
 
   if (username) {
-    authLinkDesktop = `<a class="nav-link user-btn" href="/">Logout<i class="fas fa-user login-icon"></i></a>`;
-    authLinkMobile = `<a class="nav-link user-btn" href="/">Logout</a>`;
+    authLinkDesktop = `<a class="nav-link ${pathname === "/add.html" ? "active" : ""}" 
+                      href="add.html">Add Product</a>
+                      <span class="nav-link user-btn ml-5" href="/">Logout<i class="fas fa-user login-icon"></i></span>`;
+    authLinkMobile = `<a class="nav-link ${pathname === "/add.html" ? "active" : ""}" 
+                      href="add.html">Add Product</a>
+                      <span class="nav-link user-btn" href="/">Logout</span>`;
   }
 
   navBar.innerHTML = ` 

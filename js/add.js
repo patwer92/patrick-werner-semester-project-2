@@ -1,9 +1,15 @@
-import { displayMessage } from "./common/displayMessage.js";
-
+import { displayMessage } from "./components/common/displayMessage.js";
 import { baseUrl } from "./settings/api.js";
+import { submitNewsletterForm } from "./components/form.js";
+import createMenu from "./components/common/createMenu.js";
+
+createMenu();
+
+const newsletterForm = document.querySelector("#newsletterForm");
+newsletterForm.addEventListener("submit", submitNewsletterForm);
 
 const form = document.querySelector("form");
-const name = document.querySelector("#name");
+const title = document.querySelector("#name");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
 const featured = document.querySelector("#featured");
@@ -26,7 +32,7 @@ function submitForm(event) {
 
   message.innerHTML = "";
 
-  const nameValue = name.value.trim();
+  const titleValue = title.value.trim();
   const priceValue = parseFloat(price.value);
   const descriptionValue = description.value.trim();
   const featuredValue = featured.value;
@@ -50,16 +56,32 @@ function submitForm(event) {
       }
     }
   }
-  formData.append("data", JSON.stringify(data));
 
   request.open("POST", `${baseUrl}products`);
 
-  request.send(formData, nameValue, priceValue, descriptionValue, featuredValue);
+  request.onreadystatechange = function () {
+    if (request.readyState === 4) {
+      if (request.status === 200) {
+        // displayMessage("warning", request.status, ".message-container");
+        console.log(request.status);
+      } else {
+        displayMessage(
+          "error",
+          "There was an error when adding product to server",
+          ".message-container"
+        );
+      }
+    }
+  };
+
+  formData.append("data", JSON.stringify(data));
+
+  request.send(formData, titleValue, priceValue, descriptionValue, featuredValue);
 
   if (isNaN(priceValue)) {
     return displayMessage("warning", "Invalid values", ".message-container");
   }
 
-  displayMessage("success", "Product created", ".message-container");
+  displayMessage("success", "Product was successfully created.", ".message-container");
   form.reset();
 }
